@@ -1,0 +1,24 @@
+h1 {
+    color: white;
+    text-align: center;
+    font-style: bold;
+    padding-top: 7pt;
+    font-weight: 700;
+}
+
+body {
+    color-scheme: dark;
+}
+
+form {
+    padding: 20px;
+    outline: 2px;
+}
+
+input {
+    width: 50%;
+}
+
+.container {
+    text-align: center;
+}
