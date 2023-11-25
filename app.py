@@ -84,5 +84,9 @@ def access_shortlink(path):
     
     return redirect("/")
 
+@app.route("/about", methods=["GET"])
+def about():
+    return render_template("about.html")
+
 if __name__ == "__main__":
     app.run(debug = True)
