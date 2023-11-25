@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1> About </h1>
+    <p>Blefescu (<strong>ble-​fes-​koo</strong>) is a link shortener. It is named after the fictional country (and capital city) in Jonathan Swift's satirical novel *Gulliver's Travels* that stands in stout opposition to the Lilliputians.</p>
+    <div class="container">
+        <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/gulliver.avif') }}" alt="Gulliver facing down the fierce Lilliputian army"/>
+    </div>
+</div>
+
+{% endblock %}

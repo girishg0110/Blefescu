@@ -1,26 +1,35 @@
+{% extends "base.html" %}
 {% from 'bootstrap5/form.html' import render_form %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blefescu</title>
-    <link rel="stylesheet" href = "{{ url_for('static', filename='css/main.css') }}"" />
-    {{ bootstrap.load_css() }}
-</head>
-<body>
-    <div class="title">
-        <h1> Blefescu </h1>
-    </div>
-    
-    <div class = "container">
-        {{ render_form(link_form, form_type="inline") }}
-        {% if short_link %}
-        <a class="short-link" href = {{ short_link }}> {{ short_link }} </a>
-        {% endif %}
-    </div>
-  
-</body>
-</html>
+{% block content %}
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8 d-flex flex-column align-items-center">
+            <div class="row">
+                <p class="display-3"> Blefescu </p>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    {{ render_form(link_form) }}
+                </div>
+                {% if short_link %}
+                <div class="col mt-3">
+                    <h2><a class="short-link text-success" href="{{ short_link }}">@{{ short_link }}</a></h2>
+                </div>
+                {% endif %}
+            </div>
+            <div class="row mt-2">
+                
+            </div>
 
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!--
+
+-->
